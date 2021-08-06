@@ -17,7 +17,7 @@ namespace deivisejercicio
 
         public double aportes { get; set; }
 
-        public void calcularSueldo()
+        public override void CalcularSueldo()
         {
             double sueldo;
 

@@ -15,5 +15,8 @@ namespace deivisejercicio
         public string apellido { get; set; }
 
         public string edad { get; set; }
+
+        public abstract void CalcularSueldo();
+
     }
 }
