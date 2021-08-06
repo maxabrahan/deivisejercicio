@@ -14,7 +14,7 @@ namespace deivisejercicio
 
         public double valordescontado { get; set; }
 
-        public void calcularSueldo()
+        public override void CalcularSueldo()
         {
 
             double sueldo;

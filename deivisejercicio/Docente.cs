@@ -19,7 +19,7 @@ namespace deivisejercicio
         public double sueldo { get; set; }
 
 
-        public  void calcularSueldo()
+        public override void CalcularSueldo()
         {
 
 

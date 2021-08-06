@@ -68,22 +68,13 @@ namespace deivisejercicio
                 if (opc.Equals(1))
                 {
                     registroDocente();
-
-
                 } else if (opc.Equals(2))
                 {
-
                     registroAdministrativo();
                 } else if (opc.Equals(3))
                 {
                     registroContratista();
-
                 }
-
-
-
-
-
             } while (opc == 3);
 
         }
@@ -92,7 +83,6 @@ namespace deivisejercicio
         {
             string resp;
            
-
             do {
                 Docente docente = new Docente();
 
@@ -108,54 +98,46 @@ namespace deivisejercicio
                 Console.WriteLine("Digite su edad");
                 docente.edad = Convert.ToString(Console.ReadLine());
 
-                
-                    Console.WriteLine("Dgite el valor pagado por horas");
-                    docente.valorhora = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Dgite el valor pagado por horas");
+                docente.valorhora = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Digite el numero de horas dictadas");
-                    docente.horasdictadas = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Digite el numero de horas dictadas");
+                docente.horasdictadas = Convert.ToInt32(Console.ReadLine());
 
-                    Console.WriteLine("Digite la bonificacion");
-                    docente.bonificacion = Convert.ToInt32(Console.ReadLine());
-
-                docente.calcularSueldo();
+                Console.WriteLine("Digite la bonificacion");
+                docente.bonificacion = Convert.ToInt32(Console.ReadLine());
 
 
+                docente.CalcularSueldo();
 
-
-                    Console.WriteLine("Desea seguir registrando datos???");
-                    resp = Convert.ToString(Console.ReadLine());
-               
-
-               
-
-
-
+                Console.WriteLine("Desea seguir registrando datos???");
+                resp = Convert.ToString(Console.ReadLine());
 
             } while (resp.Equals("si"));
-
-
         }
 
         public static void registroAdministrativo()
         {
             string resp;
-            Administrativo administrativo = new Administrativo();
-
-            Console.WriteLine("digite su id");
-            administrativo.id = Convert.ToString(Console.ReadLine());
-
-            Console.WriteLine("Digite su nombre");
-            administrativo.nombre = Convert.ToString(Console.ReadLine());
-
-            Console.WriteLine("Digite su apellido");
-            administrativo.apellido = Convert.ToString(Console.ReadLine());
-
-            Console.WriteLine("Digite su edad");
-            administrativo.edad = Convert.ToString(Console.ReadLine());
+            
 
             do
             {
+
+                Administrativo administrativo = new Administrativo();
+
+                Console.WriteLine("digite su id");
+                administrativo.id = Convert.ToString(Console.ReadLine());
+
+                Console.WriteLine("Digite su nombre");
+                administrativo.nombre = Convert.ToString(Console.ReadLine());
+
+                Console.WriteLine("Digite su apellido");
+                administrativo.apellido = Convert.ToString(Console.ReadLine());
+
+                Console.WriteLine("Digite su edad");
+                administrativo.edad = Convert.ToString(Console.ReadLine());
+
                 Console.WriteLine("Digite su salario basico");
                 administrativo.salariobasico = Convert.ToInt32(Console.ReadLine());
 
@@ -180,22 +162,24 @@ namespace deivisejercicio
         public static void registroContratista()
         {
             string resp;
-            Contratista contratista = new Contratista();
-
-            Console.WriteLine("digite su id");
-            contratista.id = Convert.ToString(Console.ReadLine());
-
-            Console.WriteLine("Digite su nombre");
-            contratista.nombre = Convert.ToString(Console.ReadLine());
-
-            Console.WriteLine("Digite su apellido");
-            contratista.apellido = Convert.ToString(Console.ReadLine());
-
-            Console.WriteLine("Digite su edad");
-            contratista.edad = Convert.ToString(Console.ReadLine());
-
+            
             do
             {
+                Contratista contratista = new Contratista();
+
+                Console.WriteLine("digite su id");
+                contratista.id = Convert.ToString(Console.ReadLine());
+
+                Console.WriteLine("Digite su nombre");
+                contratista.nombre = Convert.ToString(Console.ReadLine());
+
+                Console.WriteLine("Digite su apellido");
+                contratista.apellido = Convert.ToString(Console.ReadLine());
+
+                Console.WriteLine("Digite su edad");
+                contratista.edad = Convert.ToString(Console.ReadLine());
+
+
                 Console.WriteLine("Digite el valor mensual");
                 contratista.valormensual = Convert.ToInt32(Console.ReadLine());
 
@@ -228,56 +212,44 @@ namespace deivisejercicio
             if (opc.Equals(1))
             {
                 informeDocente();
-
+            }else if (opc.Equals(2))
+            {
+                informeAdministrativo();
+            }
+            else if (opc.Equals(3))
+            {
+                informeContratista();
             }
 
         }
 
+        
+
         public static void informeDocente()
         {
-          
-
-          foreach(var i in docentes)
+            foreach (var i in docentes)
             {
-
                 Console.WriteLine($"Identificacion : \n {i.id}");
                 Console.WriteLine($"Nombre:  \n {i.nombre}");
                 Console.WriteLine($"Apellido: \n {i.apellido}");
                 Console.WriteLine($"Valor por hora: \n {i.valorhora}");
                 Console.WriteLine($"numero de horas dictadas: \n{i.horasdictadas}");
                 Console.WriteLine($"Bonificacion: \n {i.bonificacion}");
-
-
                 Console.WriteLine($"el sueldo es de: { i.sueldo}");
             }
-
-          
-            
-            
-               
-               
-               
-          
-               
-
-
-
-
-
-
-
-
-
-
-
-
-
         }
 
+        private static void informeAdministrativo()
+        {
+            
+        }
 
+        private static void informeContratista()
+        {
+            
+        }
 
     }
-
 }
      
 
